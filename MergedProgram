@@ -1,0 +1,29 @@
+using System;
+
+namespace MergedProgram
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Select an activity to run:");
+            Console.WriteLine("1. Activity 1");
+            Console.WriteLine("2. Activity 2");
+
+            char choice = Console.ReadKey().KeyChar;
+
+            switch (choice)
+            {
+                case '1':
+                    Activity1.Program.Run();
+                    break;
+                case '2':
+                    Activity2.Program.Run();
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+            }
+        }
+    }
+}
